@@ -20,10 +20,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &kp Q  &kp W       &kp F        &kp P        &kp B      &kp C_MUTE  &kp C_PP  &kp J    &kp L         &kp U        &kp Y       &kp SEMI  &kp BACKSLASH
-&kp BSPC        &kp A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp LALT    &kp RALT  &kp M    &mt LSHIFT N  &mt LCTRL E  &mt LALT I  &kp O     &kp SQT
-&mt LSHFT LPAR  &lt 4 Z  &lt 3 X       &lt 2 C      &lt 1 D      &kp V                            &kp K    &lt 1 H         &lt 2 COMMA    &lt 3 DOT     &lt 4 FSLH  &mt ESC RPAR
-                                   &kp LEFT     &kp RIGHT    &kp SPACE                        &kp RET  &kp UP_ARROW  &kp DOWN
+&kp TAB         &kp Q    &kp W       &kp F        &kp P        &kp B      &kp C_MUTE  &kp C_PP  &kp J    &kp L         &kp U        &kp Y       &kp SEMI    &kp BACKSLASH
+&kp BSPC        &kp A    &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp LALT    &kp RALT  &kp M    &mt LSHIFT N  &mt LCTRL E  &mt LALT I  &kp O       &kp SQT
+&mt LSHFT LPAR  &lt 4 Z  &lt 3 X     &lt 2 C      &lt 1 D      &kp V                            &kp K    &lt 1 H       &lt 2 COMMA  &lt 3 DOT   &lt 4 FSLH  &mt ESC RPAR
+                                     &kp LEFT     &kp RIGHT    &kp SPACE                        &kp RET  &kp UP_ARROW  &kp DOWN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -34,7 +34,7 @@
             bindings = <
 &kp TAB    &kp N1        &kp N2           &kp N3        &kp N4        &kp N5          &kp LCTRL  &kp RCTRL  &kp N6    &kp N7    &kp N8     &kp N9     &kp N0  &kp BSPC
 &kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LALT   &kp RALT   &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans  &trans
-&kp LSHFT  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                        &trans    &trans    &trans     &trans     &trans  &trans
+&kp LSHFT  &kp F1        &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                        &trans    &trans    &trans     &trans     &trans  &trans
                                           &kp LGUI      &trans        &kp SPACE                             &kp LGUI  &trans    &kp SPACE
             >;
         };
@@ -49,8 +49,8 @@
             >;
         };
 
-        lower_layer {
-            display-name = "NUMBER";
+        Magic {
+            display-name = "MAGIC";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5    |  LCTRL | RCTRL |  6  |  7  |  8  |  9  |  0  | BSPC |
@@ -80,56 +80,6 @@
 &kp LCTRL  &trans    &trans  &trans    &trans    &trans     &kp LALT   &kp RALT   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
 &kp LSHFT  &trans    &trans  &trans    &trans    &trans                           &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                              &kp LGUI  &trans    &kp SPACE                        &kp RET    &trans     &kp RALT
-            >;
-        };
-
-        extra_layer_2 {
-            display-name = "EXTRA 2";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
-            >;
-        };
-
-        extra_layer_3 {
-            display-name = "EXTRA 3";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
-            >;
-        };
-
-        extra_layer_4 {
-            display-name = "EXTRA 4";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
-            >;
-        };
-
-        extra_layer_5 {
-            display-name = "EXTRA 5";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
-            >;
-        };
-
-        extra_layer_6 {
-            display-name = "EXTRA 6";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
             >;
         };
     };
