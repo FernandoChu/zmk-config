@@ -14,42 +14,51 @@
 };
 
 / {
+    behaviors {
+        page_up: page_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PAGE_UP";
+            bindings = <&kp UP>, <&kp PAGE_UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &kp Q    &kp W       &kp F        &kp P        &kp B      &kp C_MUTE  &kp C_PP  &kp J    &kp L         &kp U        &kp Y       &kp SEMI    &kp BACKSLASH
-&kp BSPC        &kp A    &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp LALT    &kp RALT  &kp M    &mt LSHIFT N  &mt LCTRL E  &mt LALT I  &kp O       &kp SQT
-&mt LSHFT LPAR  &lt 4 Z  &lt 3 X     &lt 2 C      &lt 1 D      &kp V                            &kp K    &lt 1 H       &lt 2 COMMA  &lt 3 DOT   &lt 4 FSLH  &mt ESC RPAR
-                                     &kp LEFT     &kp RIGHT    &kp SPACE                        &kp RET  &kp UP_ARROW  &kp DOWN
+&kp TAB         &kp Q    &kp W       &kp F        &kp P        &kp B      &mo 3     &kp C_PP  &kp J    &kp L         &kp U        &kp Y       &kp SEMI    &kp BACKSLASH
+&kp BSPC        &kp A    &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp LALT  &kp RALT  &kp M    &mt LSHIFT N  &mt LCTRL E  &mt LALT I  &kp O       &kp SQT
+&mt LSHFT LPAR  &lt 4 Z  &lt 3 X     &lt 1 C      &lt 2 D      &kp V                          &kp K    &lt 2 H       &lt 1 COMMA  &lt 3 DOT   &lt 4 FSLH  &mt ESC RPAR
+                                     &kp LEFT     &kp RIGHT    &kp SPACE                      &kp RET  &page_up      &kp DOWN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
-        Number {
-            display-name = "NUMBER";
-            bindings = <
-&trans    &kp N1        &kp N2           &kp N3        &kp N4        &kp N5          &kp LCTRL  &kp RCTRL  &kp N6    &kp N7    &kp N8     &kp N9     &kp N0  &kp BSPC
-&trans  &trans  &trans     &trans  &trans  &trans    &trans   &trans   &trans  &trans  &trans     &trans  &trans  &kp F12
-&trans  &kp F1        &kp F2  &kp F3    &kp F4   &kp F5                        &kp F6    &kp F7    &kp F8     &kp F9     &kp F10  &kp F11
-                                          &trans      &trans        &trans                             &trans  &trans    &trans
-            >;
-        };
-
         Symbols {
             display-name = "EXTRA 1";
             bindings = <
-&none  &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT &none &none  &kp CARET  &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR  &none
-&none     &none   &none     &none  &kp EQUAL   &kp PLUS  &none &none  &kp PIPE  &kp BSLH  &kp CARET  &kp MINUS  &kp UNDER    &none
-&trans  &trans  &trans  &trans  &trans  &trans                     &trans  &trans         &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                     &trans  &trans         &trans
+&none   &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT  &none  &none  &kp CARET  &kp AMPS        &kp STAR         &kp LPAR          &kp RPAR           &none
+&none   &none     &none   &none     &kp EQUAL  &kp PLUS   &none  &none  &kp PIPE   &kp BSLH        &kp CARET        &kp MINUS         &kp UNDER          &none
+&trans  &trans    &trans  &trans    &trans     &trans                   &trans     &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+                          &trans    &trans     &trans                   &trans     &trans          &trans
             >;
         };
 
-
+        Number {
+            display-name = "NUMBER";
+            bindings = <
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp LCTRL  &kp RCTRL  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &kp BSPC
+&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans   &kp F12
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                        &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+                        &trans  &trans  &trans                        &trans  &trans  &trans
+            >;
+        };
 
         Magic {
             display-name = "MAGIC";
