@@ -32,22 +32,24 @@
         Number {
             display-name = "NUMBER";
             bindings = <
-&kp TAB    &kp N1        &kp N2           &kp N3        &kp N4        &kp N5          &kp LCTRL  &kp RCTRL  &kp N6    &kp N7    &kp N8     &kp N9     &kp N0  &kp BSPC
-&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LALT   &kp RALT   &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans  &trans
-&kp LSHFT  &kp F1        &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                        &trans    &trans    &trans     &trans     &trans  &trans
-                                          &kp LGUI      &trans        &kp SPACE                             &kp LGUI  &trans    &kp SPACE
+&trans    &kp N1        &kp N2           &kp N3        &kp N4        &kp N5          &kp LCTRL  &kp RCTRL  &kp N6    &kp N7    &kp N8     &kp N9     &kp N0  &kp BSPC
+&trans  &trans  &trans     &trans  &trans  &trans    &trans   &trans   &trans  &trans  &trans     &trans  &trans  &kp F12
+&trans  &kp F1        &kp F2  &kp F3    &kp F4   &kp F5                        &kp F6    &kp F7    &kp F8     &kp F9     &kp F10  &kp F11
+                                          &trans      &trans        &trans                             &trans  &trans    &trans
             >;
         };
 
         Symbols {
             display-name = "EXTRA 1";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &kp EQUAL  &trans  &trans  &trans  &kp BACKSLASH  &trans  &trans  &trans  &trans
+&none  &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT &none &none  &kp CARET  &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR  &none
+&none     &none   &none     &none  &kp EQUAL   &kp PLUS  &none &none  &kp PIPE  &kp BSLH  &kp CARET  &kp MINUS  &kp UNDER    &none
 &trans  &trans  &trans  &trans  &trans  &trans                     &trans  &trans         &trans  &trans  &trans  &trans
                         &trans  &trans  &trans                     &trans  &trans         &trans
             >;
         };
+
+
 
         Magic {
             display-name = "MAGIC";
