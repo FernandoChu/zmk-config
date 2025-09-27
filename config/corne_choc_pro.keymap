@@ -58,10 +58,10 @@
         Default {
             display-name = "COLEMAK-DH";
             bindings = <
-&kp TAB         &kp Q    &kp W       &kp F        &kp P        &kp B      &mo 3     &kp C_PP  &kp J    &kp L         &kp U          &kp Y       &kp SEMI    &kp BACKSLASH
-&kp BSPC        &kp A    &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp LALT  &kp RALT  &kp M    &mt LSHIFT N  &mt LCTRL E    &mt LALT I  &kp O       &kp SQT
-&mt LSHFT LPAR  &lt 4 Z  &lt 3 X     &lt 1 C      &lt 2 D      &kp V                          &kp K    &lt 2 H       &lt 1 COMMA    &lt 3 DOT   &lt 4 FSLH  &mt ESC RPAR
-                                     &mm_home     &mm_end      &kp SPACE                      &kp RET  &mm_page_up   &mm_page_down
+&kp TAB         &kp Q       &kp W       &kp F        &kp P        &kp B      &mo 3     &kp C_PP  &kp J    &kp L         &kp U          &kp Y       &kp SEMI    &kp BACKSLASH
+&kp BSPC        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp LALT  &kp RALT  &kp M    &mt LSHIFT N  &mt LCTRL E    &mt LALT I  &mt LGUI O  &kp SQT
+&mt LSHFT LPAR  &lt 4 Z     &lt 3 X     &lt 1 C      &lt 2 D      &kp V                          &kp K    &lt 2 H       &lt 1 COMMA    &lt 3 DOT   &lt 4 FSLH  &mt ESC RPAR
+                                        &mm_home     &mm_end      &kp SPACE                      &kp RET  &mm_page_up   &mm_page_down
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -80,10 +80,10 @@
         Number {
             display-name = "NUMBER";
             bindings = <
-&trans      &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp LCTRL  &kp RCTRL  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &kp BSPC
-&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP         &kp C_BRI_DN         &kp C_BRI_UP  &trans  &trans     &trans     &trans  &kp C_PREV           &kp C_PREV           &kp C_NEXT           &kp C_PP   &kp F12
-&trans      &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                        &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-                            &trans  &trans  &trans                        &trans  &trans  &trans
+&trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5  &kp LCTRL  &kp RCTRL  &kp N6  &kp N7      &kp N8      &kp N9      &kp N0    &kp BSPC
+&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_DN  &kp C_BRI_UP  &trans  &trans     &trans     &trans  &kp C_PREV  &kp C_PREV  &kp C_NEXT  &kp C_PP  &kp F12
+&trans      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                        &kp F6  &kp F7      &kp F8      &kp F9      &kp F10   &kp F11
+                                        &trans        &trans        &trans                        &trans  &trans      &trans
             >;
         };
 
