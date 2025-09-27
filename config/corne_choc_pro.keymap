@@ -15,19 +15,37 @@
 
 / {
     behaviors {
-        page_up: page_up {
+        mm_page_up: mm_page_up {
             compatible = "zmk,behavior-mod-morph";
-            label = "PAGE_UP";
+            label = "MM_PAGE_UP";
             bindings = <&kp UP>, <&kp PAGE_UP>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
 
-        page_down: page_down {
+        mm_page_down: mm_page_down {
             compatible = "zmk,behavior-mod-morph";
-            label = "PAGE_DOWN";
+            label = "MM_PAGE_DOWN";
             bindings = <&kp DOWN>, <&kp PAGE_DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        mm_home: mm_home {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_HOME";
+            bindings = <&kp LEFT>, <&kp HOME>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        mm_end: mm_end {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_END";
+            bindings = <&kp RIGHT>, <&kp END>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -37,13 +55,13 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default {
+        Default {
             display-name = "COLEMAK-DH";
             bindings = <
-&kp TAB         &kp Q    &kp W       &kp F        &kp P        &kp B      &mo 3     &kp C_PP  &kp J    &kp L         &kp U        &kp Y       &kp SEMI    &kp BACKSLASH
-&kp BSPC        &kp A    &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp LALT  &kp RALT  &kp M    &mt LSHIFT N  &mt LCTRL E  &mt LALT I  &kp O       &kp SQT
-&mt LSHFT LPAR  &lt 4 Z  &lt 3 X     &lt 1 C      &lt 2 D      &kp V                          &kp K    &lt 2 H       &lt 1 COMMA  &lt 3 DOT   &lt 4 FSLH  &mt ESC RPAR
-                                     &kp LEFT     &kp RIGHT    &kp SPACE                      &kp RET  &page_up      &kp DOWN
+&kp TAB         &kp Q    &kp W       &kp F        &kp P        &kp B      &mo 3     &kp C_PP  &kp J    &kp L         &kp U          &kp Y       &kp SEMI    &kp BACKSLASH
+&kp BSPC        &kp A    &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp LALT  &kp RALT  &kp M    &mt LSHIFT N  &mt LCTRL E    &mt LALT I  &kp O       &kp SQT
+&mt LSHFT LPAR  &lt 4 Z  &lt 3 X     &lt 1 C      &lt 2 D      &kp V                          &kp K    &lt 2 H       &lt 1 COMMA    &lt 3 DOT   &lt 4 FSLH  &mt ESC RPAR
+                                     &mm_home     &mm_end      &kp SPACE                      &kp RET  &mm_page_up   &mm_page_down
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -62,16 +80,15 @@
         Number {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp LCTRL  &kp RCTRL  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &kp BSPC
-&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans   &kp F12
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                        &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-                        &trans  &trans  &trans                        &trans  &trans  &trans
+&trans      &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp LCTRL  &kp RCTRL  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &kp BSPC
+&kp K_MUTE  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans   &kp F12
+&trans      &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                        &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+                            &trans  &trans  &trans                        &trans  &trans  &trans
             >;
         };
 
         Magic {
             display-name = "MAGIC";
-
             bindings = <
 &kp TAB    &kp N1        &kp N2           &kp N3        &kp N4        &kp N5          &kp LCTRL  &kp RCTRL  &kp N6    &kp N7    &kp N8     &kp N9     &kp N0  &kp BSPC
 &kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LALT   &kp RALT   &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans  &trans
@@ -82,7 +99,6 @@
 
         raise_layer {
             display-name = "SYMBOL";
-
             bindings = <
 &kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp LCTRL  &kp RCTRL  &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &kp LCTRL  &trans    &trans  &trans    &trans    &trans     &kp LALT   &kp RALT   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
