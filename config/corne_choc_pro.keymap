@@ -22,11 +22,31 @@
             bindings = <
 &kp TAB         &kp Q  &kp W       &kp F        &kp P        &kp B      &kp C_MUTE  &kp C_PP  &kp J    &kp L         &kp U        &kp Y       &kp SEMI  &kp BACKSLASH
 &kp BSPC        &kp A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp LALT    &kp RALT  &kp M    &mt LSHIFT N  &mt LCTRL E  &mt LALT I  &kp O     &kp SQT
-&mt LSHFT LPAR  &kp Z  &kp X       &kp C        &lt 3 D      &kp V                            &kp K    &kp H         &kp COMMA    &kp DOT     &kp FSLH  &mt ESC RPAR
-                                   &kp LGUI     &mo 1        &kp SPACE                        &kp RET  &mo 2         &kp RALT
+&mt LSHFT LPAR  &kp Z  &kp X       &lt 3 C      &lt 2 D      &kp V                            &kp K    &kp H         &kp COMMA    &kp DOT     &kp FSLH  &mt ESC RPAR
+                                   &kp LEFT     &kp RIGHT    &kp SPACE                        &kp RET  &kp UP_ARROW  &kp DOWN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
+        };
+
+        Number {
+            display-name = "NUMBER";
+            bindings = <
+&kp TAB    &kp N1        &kp N2           &kp N3        &kp N4        &kp N5          &kp LCTRL  &kp RCTRL  &kp N6    &kp N7    &kp N8     &kp N9     &kp N0  &kp BSPC
+&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LALT   &kp RALT   &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans  &trans
+&kp LSHFT  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                        &trans    &trans    &trans     &trans     &trans  &trans
+                                          &kp LGUI      &trans        &kp SPACE                             &kp LGUI  &trans    &kp SPACE
+            >;
+        };
+
+        Symbols {
+            display-name = "EXTRA 1";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &kp EQUAL  &trans  &trans  &trans  &kp BACKSLASH  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                     &trans  &trans         &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                     &trans  &trans         &trans
+            >;
         };
 
         lower_layer {
@@ -60,16 +80,6 @@
 &kp LCTRL  &trans    &trans  &trans    &trans    &trans     &kp LALT   &kp RALT   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
 &kp LSHFT  &trans    &trans  &trans    &trans    &trans                           &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                              &kp LGUI  &trans    &kp SPACE                        &kp RET    &trans     &kp RALT
-            >;
-        };
-
-        Symbols {
-            display-name = "EXTRA 1";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &kp EQUAL  &trans  &trans  &trans  &kp BACKSLASH  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                     &trans  &trans         &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                     &trans  &trans         &trans
             >;
         };
 
