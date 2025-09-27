@@ -20,15 +20,9 @@
         default_layer {
             display-name = "QWERTY";
 
-            // --------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |  MUTE |  PP   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |  LALT |  RALT |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |               |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
-
             bindings = <
 &kp TAB         &kp Q  &kp W  &kp F        &kp P        &kp B      &kp C_MUTE  &kp C_PP  &kp J    &kp L  &kp U      &kp Y    &kp SEMI  &kp BACKSLASH
-&kp BSPC        &kp A  &kp R  &mt LCTRL S  &mt T LSHFT  &kp G      &kp LALT    &kp RALT  &kp M    &kp N  &kp E      &kp I    &kp O     &kp SQT
+&kp BSPC        &kp A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp LALT    &kp RALT  &kp M   &mt LSHIFT N  &mt LCTRL E      &mt LALT I    &kp O     &kp SQT
 &mt LSHFT LPAR  &kp Z  &kp X  &kp C        &kp D        &kp V                            &kp K    &kp H  &kp COMMA  &kp DOT  &kp FSLH  &mt ESC RPAR
                               &kp LGUI     &mo 1        &kp SPACE                        &kp RET  &mo 2  &kp RALT
             >;
