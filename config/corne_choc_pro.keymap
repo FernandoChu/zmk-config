@@ -58,10 +58,10 @@
         Default {
             display-name = "COLEMAK-DH";
             bindings = <
-&kp TAB         &kp Q       &kp W       &kp F        &kp P        &kp B       &mo 3     &kp C_PP  &kp J       &kp L         &kp U          &kp Y       &kp SEMI    &kp BACKSLASH
-&kp BSPC        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G       &kp LALT  &kp RALT  &kp M       &mt LSHIFT N  &mt LCTRL E    &mt LALT I  &mt LGUI O  &kp SQT
-&mt LSHFT LPAR  &lt 4 Z     &lt 3 X     &lt 2 C      &lt 1 D      &kp V                           &kp K       &lt 1 H       &lt 2 COMMA    &lt 3 DOT   &lt 4 FSLH  &mt ESC RPAR
-                                        &none     &kp mm_home    &kp mm_end                      &mm_page_up  &mm_page_down     &none
+&kp TAB         &kp Q       &kp W       &kp F        &kp P        &kp B       &mo 3     &kp C_PP  &kp J        &kp L          &kp U        &kp Y       &kp SEMI    &kp BACKSLASH
+&kp BSPC        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G       &kp LALT  &kp RALT  &kp M        &mt LSHIFT N   &mt LCTRL E  &mt LALT I  &mt LGUI O  &kp SQT
+&mt LSHFT LPAR  &lt 4 Z     &lt 3 X     &lt 2 C      &lt 1 D      &kp V                           &kp K        &lt 1 H        &lt 2 COMMA  &lt 3 DOT   &lt 4 FSLH  &mt RIGHT_SHIFT RPAR
+                                        &none        &kp SPACE    &kp ESCAPE                      &mm_page_up  &mm_page_down  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
